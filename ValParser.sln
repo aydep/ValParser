@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValParser", "ValParser\ValParser.csproj", "{E44E31E5-60D1-45F5-9399-0A0F0305B305}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E44E31E5-60D1-45F5-9399-0A0F0305B305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44E31E5-60D1-45F5-9399-0A0F0305B305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44E31E5-60D1-45F5-9399-0A0F0305B305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44E31E5-60D1-45F5-9399-0A0F0305B305}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {411F6E36-0C88-44D1-AA77-1E617E0B8C8C}
+	EndGlobalSection
+EndGlobal

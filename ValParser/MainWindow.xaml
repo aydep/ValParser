@@ -1,0 +1,61 @@
+﻿<Window x:Class="ValParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValParser"
+        mc:Ignorable="d"
+        Title="Парсер валют и котировок металлов"
+        Icon="pack://application:,,,/icon.ico"
+        Height="450" Width="800"
+        xmlns:controls="using:Microsoft.UI.Xaml.Controls">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="dateGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <ListBox x:Name="cursTypeListBox" VerticalAlignment="Stretch">
+                <ListBoxItem Content="Валюты" Selected="vals_Selected"/>
+                <ListBoxItem Content="Металлы" Selected="metalls_Selected"/>
+            </ListBox>
+            
+            <DatePicker x:Name="mainPicker" Grid.Column="1"/>
+            <DatePicker x:Name="secondPicker" Grid.Column="2"/>
+
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="todayButton" Content="Сегодня" Click="todayButton_Click"/>
+                <Button x:Name="lastButton" Content="Последнее" Grid.Row="1" Click="latestButton_Click"/>
+            </Grid>
+            
+            <Button Content="Получить" Click="ParseBtn_Click" Grid.Column="4"/>
+
+            <TextBox x:Name="pathTextBox" Grid.Row="1" Grid.ColumnSpan="4"/>
+            <Button Grid.Row="1" Grid.Column="5" Content="Обзор" Click="pathBtn_Click"/>
+        </Grid>
+        
+        
+
+
+
+        <DataGrid x:Name="cursDataGrid" Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding}" AutoGenerateColumns="True"/>
+    </Grid>
+</Window>
